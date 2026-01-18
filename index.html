@@ -18,18 +18,27 @@
     <div class="container">
         <p>Order your favorite books or request a custom order below!</p>
         <form id="orderForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="text" placeholder="Book Title or Custom Request" required>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="book" placeholder="Book Title or Custom Request" required>
             <button type="submit">Place Order</button>
         </form>
     </div>
 
     <script>
-    document.getElementById('orderForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // In a real setup, you would send this data to a backend that integrates with WhatsApp.
-        alert('Order submitted! This would be sent to WhatsApp in a live version.');
-    });
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const phoneNumber = '1234567890'; // Replace with your WhatsApp number
+            const name = document.getElementById('name').value;
+            const book = document.getElementById('book').value;
+            const message = `New order from ${name}: ${book}`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Open the URL in a new tab
+            window.open(url, '_blank');
+        });
     </script>
 </body>
 </html>
