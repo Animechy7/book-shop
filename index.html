@@ -524,16 +524,16 @@
 
     // FIXED: single valid books array (no duplicates)
     const books = [
-      { id:"b1", title:"The Great Gatsby", author:"F. Scott Fitzgerald", genre:"Classic", price: 450, tag:"Bestseller", cover:"images/7F451.jpg" },
-      { id:"b2", title:"1984", author:"George Orwell", genre:"Dystopian", price: 500, tag:"Must Read", cover:"images/2A-Clockwork-Orange-Book-Cover-368x600-1.jpg" },
-      { id:"b3", title:"Pride and Prejudice", author:"Jane Austen", genre:"Romance", price: 420, tag:"Classic", cover:"images/1prideandprejudice.jpg" },
-      { id:"b4", title:"To Kill a Mockingbird", author:"Harper Lee", genre:"Classic", price: 480, tag:"Top Pick", cover:"images/4american-psycho-670x1024-1.jpg" },
-      { id:"b5", title:"Moby-Dick", author:"Herman Melville", genre:"Adventure", price: 550, tag:"Epic", cover:"images/3px-The_Grapes_of_Wrath_1939_1st_ed_cover.jpg" },
-      { id:"b6", title:"The Alchemist", author:"Paulo Coelho", genre:"Fiction", price: 520, tag:"Popular", cover:"images/5bravenewworld.jpg" },
-      { id:"b7", title:"Crime and Punishment", author:"Fyodor Dostoevsky", genre:"Literary", price: 650, tag:"Deep", cover:"images/8engulfedinflames.jpg" },
-      { id:"b8", title:"The Hobbit", author:"J.R.R. Tolkien", genre:"Fantasy", price: 600, tag:"Fan Favorite", cover:"images/6Animorphs.jpg" },
-      { id:"b9", title:"Wuthering Heights", author:"Emily Bronte", genre:"Classic", price: 430, tag:"Classic", cover:"images/9faceofangel.jpg" }
-    ];
+  { id:"b1", title:"The Great Gatsby", author:"F. Scott Fitzgerald", genre:"Classic", price: 450, tag:"Bestseller", cover:"7F451.jpg" },
+  { id:"b2", title:"1984", author:"George Orwell", genre:"Dystopian", price: 500, tag:"Must Read", cover:"2A-Clockwork-Orange-Book-Cover-368x600-1.jpg" },
+  { id:"b3", title:"Pride and Prejudice", author:"Jane Austen", genre:"Romance", price: 420, tag:"Classic", cover:"1prideandprejudice.jpg" },
+  { id:"b4", title:"To Kill a Mockingbird", author:"Harper Lee", genre:"Classic", price: 480, tag:"Top Pick", cover:"4american-psycho-670x1024-1.jpg" },
+  { id:"b5", title:"Moby-Dick", author:"Herman Melville", genre:"Adventure", price: 550, tag:"Epic", cover:"3px-The_Grapes_of_Wrath_1939_1st_ed_cover.jpg" },
+  { id:"b6", title:"The Alchemist", author:"Paulo Coelho", genre:"Fiction", price: 520, tag:"Popular", cover:"5bravenewworld.jpg" },
+  { id:"b7", title:"Crime and Punishment", author:"Fyodor Dostoevsky", genre:"Literary", price: 650, tag:"Deep", cover:"8engulfedinflames.jpg" },
+  { id:"b8", title:"The Hobbit", author:"J.R.R. Tolkien", genre:"Fantasy", price: 600, tag:"Fan Favorite", cover:"6Animorphs.jpg" },
+  { id:"b9", title:"Wuthering Heights", author:"Emily Bronte", genre:"Classic", price: 430, tag:"Classic", cover:"9faceofangel.jpg" }
+];
 
     const state = {
       cart: JSON.parse(localStorage.getItem("cb_cart") || "{}"),
