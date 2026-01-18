@@ -202,22 +202,26 @@
 
     /* Cover now supports real images */
     .cover{
-      height: 190px;
-      background-color: rgba(255,255,255,.06);
-      background-size: cover;
-      background-position: center;
-      position:relative;
-      display:flex;
-      align-items:flex-end;
-      padding: 12px;
+  height: 190px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
 
-      /* fallback gradient so you can see broken images instantly */
-      background-image:
-        radial-gradient(260px 180px at 30% 20%, rgba(124,92,255,.55), transparent 55%),
-        radial-gradient(240px 160px at 80% 30%, rgba(45,226,230,.35), transparent 55%),
-        rgba(255,255,255,.06);
-    }
+.cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
+.tag{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+}
     .tag{
       font-size:12px;
       padding: 6px 10px;
@@ -580,9 +584,12 @@
 
         return `
           <article class="card">
-            <div class="cover" ${coverStyle}>
-              <span class="tag">${b.tag}</span>
-            </div>
+          
+           <div class="cover">
+            <img src="${b.cover}" alt="${b.title}" loading="lazy" onerror="this.style.display='none'">
+             <span class="tag">${b.tag}</span>
+              </div>
+
             <div class="cardBody">
               <p class="title">${b.title}</p>
               <div class="meta">
